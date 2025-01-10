@@ -1,12 +1,15 @@
 # config.py
 
-# API Key de OpenWeather
-API_KEY = "f3d21b5de7aee0b79fb0b88814e4ea46"
+from dotenv import load_dotenv
+import os
 
-# Configuración para alertas por correo (opcional)
-EMAIL_SENDER = "samucol2004@gmail.com"
-EMAIL_PASSWORD = "Samuel2004"
-EMAIL_RECEIVER = "samucol2004@gmail.com"
+# Cargar las variables desde el archivo .env
+load_dotenv()
 
-# Ubicación para consultar el clima
-CITY_NAME = "Asunción"
+# Configuración extraída del archivo .env
+API_KEY = os.getenv("API_KEY")
+EMAIL_SENDER = os.getenv("EMAIL_SENDER")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER")
+CITY_NAME = os.getenv("CITY_NAME")
+
